@@ -1,4 +1,4 @@
-package com.example.newsfetcher.news
+package com.example.newsfetcher.news.domain
 
 import com.example.newsfetcher.base.attempt
 import com.example.newsfetcher.news.data.NewsRepository

@@ -1,7 +1,10 @@
 package com.example.newsfetcher.news.data
 
-class NewsRemoteSourceImpl(val api: NewsApi): NewsRemoteSource {
-    override suspend fun getNews(): String {
-        return api.getAllNews().toString()
+import com.example.newsfetcher.news.data.model.ArticlesModelRemote
+import com.example.newsfetcher.news.data.model.NewsModelRemote
+
+class NewsRemoteSourceImpl(private val api: NewsApi): NewsRemoteSource {
+    override suspend fun getNews(): NewsModelRemote {
+        return api.getAllNews()
     }
 }

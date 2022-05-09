@@ -2,7 +2,7 @@ package com.example.newsfetcher
 
 import com.example.newsfetcher.news.*
 import com.example.newsfetcher.news.data.*
-import com.google.gson.Gson
+import com.example.newsfetcher.news.domain.NewsInteractor
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.module
 import retrofit2.Retrofit

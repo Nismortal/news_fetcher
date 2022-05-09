@@ -1,9 +1,10 @@
 package com.example.newsfetcher.news
 
 import com.example.newsfetcher.base.Event
+import com.example.newsfetcher.news.domain.ArticleModelDomain
 
 data class ViewState(
-    val text: String
+    val articles: List<ArticleModelDomain>
 ) 
 
 sealed class UiEvent: Event {
@@ -14,5 +15,5 @@ sealed class UiEvent: Event {
 
 sealed class DataEvent: Event {
 
-    data class RequestNews(val text: String): DataEvent()
+    data class RequestNews(val articles: List<ArticleModelDomain>): DataEvent()
 }
