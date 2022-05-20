@@ -1,4 +1,4 @@
-package com.example.newsfetcher.news
+package com.example.newsfetcher.news.presentation
 
 import android.util.Log
 import androidx.lifecycle.viewModelScope
@@ -25,7 +25,7 @@ class NewsViewModel(val interactor: NewsInteractor) : BaseViewModel<ViewState>()
     override fun reduce(event: Event, previousState: ViewState): ViewState? {
         when (event) {
             is DataEvent.RequestNews -> {
-               return previousState.copy(
+                return previousState.copy(
                     articles = event.articles
                 )
             }

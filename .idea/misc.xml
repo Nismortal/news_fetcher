@@ -3,7 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="app/src/main/res/layout/article_item.xml" value="0.19166666666666668" />
+        <entry key="..\:/Users/johnd/AndroidStudioProjects/newsfetcher/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/johnd/AndroidStudioProjects/newsfetcher/app/src/main/res/layout/article_item.xml" value="0.22" />
+        <entry key="..\:/Users/johnd/AndroidStudioProjects/newsfetcher/app/src/main/res/layout/fragment_news.xml" value="0.2" />
         <entry key="app/src/main/res/layout/fragment_news.xml" value="0.25" />
       </map>
     </option>

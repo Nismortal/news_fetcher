@@ -1,10 +1,9 @@
 package com.example.newsfetcher.news.data
 
-import com.example.newsfetcher.news.domain.ArticleModelDomain
-import com.example.newsfetcher.news.domain.toDomain
+import com.example.newsfetcher.news.data.model.NewsModelRemote
 
-class NewsRepositoryImpl(private val remote: NewsRemoteSource): NewsRepository {
-    override suspend fun getNews(): List<ArticleModelDomain> {
-        return remote.getNews().toDomain()
+class NewsRepositoryImpl(private val newsSource: NewsRemoteSource) : NewsRepository {
+    override suspend fun getNews(): NewsModelRemote {
+        return newsSource.getNews()
     }
 }

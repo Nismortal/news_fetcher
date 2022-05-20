@@ -1,20 +1,24 @@
-package com.example.newsfetcher.news
+package com.example.newsfetcher.news.presentation
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.newsfetcher.R
+import com.example.newsfetcher.news.presentation.adapter.ArticleAdapter
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
-class NewsFragment: Fragment(){
+class NewsFragment : Fragment() {
 
-    val rv: RecyclerView by lazy {requireView().findViewById(R.id.rv)}
-    val adapter = ArticleAdapter()
+    val rv: RecyclerView by lazy { requireView().findViewById(R.id.rv) }
+    val adapter = ArticleAdapter(onClicked = {
+        requireActivity().supportFragmentManager.beginTransaction().replace(
+            android.R.id.content, DetailsFragment()
+        ).commit()
+    })
 
     private val viewModel: NewsViewModel by viewModel()
 

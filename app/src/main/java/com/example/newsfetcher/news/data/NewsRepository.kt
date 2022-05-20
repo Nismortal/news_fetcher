@@ -1,7 +1,7 @@
 package com.example.newsfetcher.news.data
 
-import com.example.newsfetcher.news.domain.ArticleModelDomain
+import com.example.newsfetcher.news.data.model.NewsModelRemote
 
 interface NewsRepository {
-    suspend fun getNews(): List<ArticleModelDomain>
+    suspend fun getNews(): NewsModelRemote
 }

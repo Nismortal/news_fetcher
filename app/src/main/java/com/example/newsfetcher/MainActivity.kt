@@ -1,8 +1,8 @@
 package com.example.newsfetcher
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.newsfetcher.news.NewsFragment
+import androidx.appcompat.app.AppCompatActivity
+import com.example.newsfetcher.news.presentation.NewsFragment
 
 class MainActivity : AppCompatActivity() {
 
